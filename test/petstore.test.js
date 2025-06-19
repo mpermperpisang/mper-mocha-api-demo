@@ -1,9 +1,6 @@
-const chai = require('chai');
-const chaiHttp = require('chai-http');
+const chai = require('chai').use(require('chai-http'));
 const expect = chai.expect;
 const { BASE_URL } = require('../config/apiConfig');
-
-chai.use(chaiHttp);
 
 describe('API Automation Testing - Petstore', function() {
   let createdPetId = null;
