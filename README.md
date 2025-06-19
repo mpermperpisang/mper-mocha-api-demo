@@ -6,7 +6,11 @@
 - Docker Desktop (for MacOS only) or Docker Server
 
 ### How to Setup
+Without Makefile
 - `npm ci`
+
+With Makefile
+- `make ci`
 
 ### How to Run
 Without Docker
