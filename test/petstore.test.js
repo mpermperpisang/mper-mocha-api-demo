@@ -1,31 +1,27 @@
 const chai = require('chai').use(require('chai-http'));
 const expect = chai.expect;
 
-const { BASE_URL } = require('../config/apiConfig');
+const { PET_ENDPOINT, FIND_BY_STATUS } = require('../config/apiConfig');
 const { generatePet } = require('../helper/petData');
 
 describe('API Automation Testing - Petstore', function() {
-  let createdPetId = null;
-
   it('01 - Add new pet and verify the response', function(done) {
     const newPet = generatePet('Banana', 'available');
 
-    chai.request(BASE_URL)
-      .post('/pet')
+    chai.request(PET_ENDPOINT)
+      .post('')
       .send(newPet)
-      .end(function(err, res) {
-        createdPetId = res.body.id;
-
+      .end((err, res) => {
         expect(res).to.have.status(200);
         expect(res.body).to.include(newPet);
-
+        
         done();
       });
   });
   
   it('02 - Find pets by status = "available"', function (done) {
-    chai.request(BASE_URL)
-      .get('/pet/findByStatus?status=available')
+    chai.request(FIND_BY_STATUS('available'))
+      .get('')
       .end(function (err, res) {
         const invalid = res.body.find(pet => pet.status !== 'available');
 
