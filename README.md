@@ -5,6 +5,9 @@
 - NPM v10.9.2
 - Docker Desktop (for MacOS only) or Docker Server
 
+### How to Setup
+- `npm ci`
+
 ### How to Run
 Without Docker
 - `npx mocha` or
