@@ -13,3 +13,6 @@ Without Docker
 With Docker
 - `docker build -t mper-mocha-test .` then
 - `docker run --rm mper-mocha-test`
+
+With Makefile + Docker
+- `make test IMAGE_NAME=<your-custom-image>`
