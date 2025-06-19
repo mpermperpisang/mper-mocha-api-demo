@@ -6,7 +6,7 @@ WORKDIR /mocha-test-project
 
 # Salin file package dan install dependencies
 COPY package*.json ./
-RUN npm install
+RUN npm ci
 
 # Salin semua file project ke container
 COPY . .
