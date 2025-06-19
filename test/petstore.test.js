@@ -4,7 +4,7 @@ const expect = chai.expect;
 const { PET_ENDPOINT, FIND_BY_STATUS } = require('../config/apiConfig');
 const { generatePet } = require('../helper/petData');
 
-describe('API Automation Testing - Petstore', function() {
+describe('API Automation Testing - https://petstore.swagger.io/#/', function() {
   it('01 - Add new pet and verify the response', function(done) {
     const newPet = generatePet('Banana', 'available');
 
