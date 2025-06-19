@@ -1,5 +1,6 @@
 const chai = require('chai').use(require('chai-http'));
 const expect = chai.expect;
+
 const { BASE_URL } = require('../config/apiConfig');
 const { generatePet } = require('../helper/petData');
 
