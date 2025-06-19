@@ -23,3 +23,6 @@ With Docker
 
 With Makefile + Docker
 - `make test IMAGE_NAME=<your-custom-image>`
+
+Open Allure Reporter (without Docker)
+- `allure serve allure-results`

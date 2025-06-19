@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "pretest": "rimraf allure-results",
+    "test": "mocha -R allure-mocha"
   },
   "mocha": {
     "timeout": 2500
@@ -21,8 +22,10 @@
   },
   "homepage": "https://github.com/mpermperpisang/mper-mocha-demo#readme",
   "devDependencies": {
+    "allure-mocha": "^3.2.2",
     "chai": "^4.3.7",
     "chai-http": "^4.3.0",
-    "mocha": "^10.2.0"
+    "mocha": "^10.2.0",
+    "rimraf": "^6.0.1"
   }
 }

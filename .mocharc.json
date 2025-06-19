@@ -1,0 +1,6 @@
+{
+  "reporter": "allure-mocha",
+  "reporterOptions": {
+    "resultsDir": "allure-results"
+  }
+}
