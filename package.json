@@ -6,6 +6,9 @@
   "scripts": {
     "test": "mocha"
   },
+  "mocha": {
+    "timeout": 2500
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mpermperpisang/mper-mocha-demo.git"
