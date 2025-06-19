@@ -1,10 +1,9 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 const expect = chai.expect;
+const { BASE_URL } = require('../config/apiConfig');
 
 chai.use(chaiHttp);
-
-const baseUrl = 'https://petstore.swagger.io/v2';
 
 describe('API Automation Testing - Petstore', function() {
   let createdPetId = null;
@@ -15,7 +14,7 @@ describe('API Automation Testing - Petstore', function() {
       status: 'available'
     };
 
-    chai.request(baseUrl)
+    chai.request(BASE_URL)
       .post('/pet')
       .send(newPet)
       .end(function(err, res) {
