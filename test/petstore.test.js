@@ -14,10 +14,24 @@ describe('API Automation Testing - Petstore', function() {
       .post('/pet')
       .send(newPet)
       .end(function(err, res) {
+        createdPetId = res.body.id;
+
         expect(res).to.have.status(200);
         expect(res.body).to.include(newPet);
-        
-        createdPetId = res.body.id;
+
+        done();
+      });
+  });
+  
+  it('02 - Find pets by status = "available"', function (done) {
+    chai.request(BASE_URL)
+      .get('/pet/findByStatus?status=available')
+      .end(function (err, res) {
+        const invalid = res.body.find(pet => pet.status !== 'available');
+
+        expect(res).to.have.status(200);
+        expect(res.body).to.be.an('array');
+        expect(invalid).to.be.undefined;
 
         done();
       });
