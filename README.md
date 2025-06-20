@@ -14,8 +14,9 @@ With Makefile
 
 ### How to Run
 Without Docker
-- `npx mocha --grep "03 - Find pets by status = pending"` or
-- `npm test` or 
+- `npx mocha --grep '04 - As a User, I want to find "pending" pet successfully'` (without pretest) or
+- `npm test -- --grep '01 - As a User, I failed to add new pet that "available" and "sleeping"'` or
+- `npm test`
 
 With Docker
 - `docker build -t mper-mocha-test .` then
