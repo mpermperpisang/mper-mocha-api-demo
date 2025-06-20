@@ -5,6 +5,11 @@
 - NPM v10.9.2
 - Docker Desktop (for MacOS only) or Docker Server
 
+### Framework + Library + Reporter
+- Mocha
+- Chai
+- Allure
+
 ### How to Setup
 Without Makefile
 - `npm ci`
